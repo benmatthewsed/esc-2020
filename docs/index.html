@@ -32,12 +32,32 @@ European Society of Criminology, 2020-09-11
 
 ![](https://www.understanding-inequalities.ac.uk/sites/all/themes/theme935/logo.png)&lt;!-- --&gt;
 
-
 ---
 
+
+&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/broidy_quote.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+# How to model 'intersectionality'?
 - Draw on quantitative approaches to modelling intersectionality
 - Standard approach such as interaction terms (see MacQueen, 2016) limited by ‘curse of dimensionality’ (Bell et al. 2019)
 - Random effects specification proposed as an alternative (Jones et al. 2016)
+
+---
+
+
+&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/mcall_quote.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Data
+- Linked data sources from different administrative departments in Queensland, Australia:
+  - Youth justice
+  - Adult justice
+  - Child protection
+  - Birth register
+  - Marriages
+  - Some health data (mental health)
 
 
 ---
@@ -60,14 +80,17 @@ European Society of Criminology, 2020-09-11
 - Make convictions trajectory groups with Latent Class Growth Curves
 - Fit multinomial logistic regression model to estimate association between our independent variables and convictions class with ‘intersectional’ random effect
 - Interpret model results through Average Predictive Comparison (Gelman and Pardoe 2007)
+- Gives estimated probability of a being in a particular convictions class, conditional different configurations of our independent variables
 
 
 ---
-#Methods
-- Model estimates from multinomial logistic models are “extraordinarily hard” to interpret (McElreath, 2019)
-- Even more so with our ‘intersectional’ random effect!
-- Interpret through Average Predictive Comparisons (Gelman and Pardoe, 2007)
-- Gives estimated probability of a being in a particular convictions class, conditional different configurations of our independent variables
+name: results
+class: center, middle, inverse
+
+# Results
+---
+
+&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/y18_trajectories.png" width="78%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -75,6 +98,25 @@ European Society of Criminology, 2020-09-11
 ## Tooooo many graphs?
 
 &lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/20200326-mers_comp_baseline.png" width="78%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/probs_plot.png" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# Discussion
+- Risk factors’ relationships to the probabilities of trajectory membership differs by sex and Indigenous status…
+- … but the cumulative effect of these risk factors lead to similar outcomes by sex`*`IS, despite the very different estimated baselines by sex`*`IS
+- We have to be careful when interpreting why our model has estimated different effects of risk factors for different groups, and when extrapolating back from our results to the population as a whole.
+
+
+
+---
+
+&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/iv_proportions.png" width="78%" style="display: block; margin: auto;" /&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
