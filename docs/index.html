@@ -16,7 +16,63 @@
 
 
 
-## Tooooo many graphs
+
+name: title
+class: center, middle, inverse
+
+# Exploring inequalities in the impact of childhood system contact on adult criminal conviction trajectories by sex and Indigenous status: Evidence from an Australian data linkage project
+
+Ben Matthews&lt;sup&gt;1&lt;/sup&gt;, Susan McVie&lt;sup&gt;1&lt;/sup&gt;, Carleen Thompson&lt;sup&gt;2&lt;/sup&gt; and Anna Stewart&lt;sup&gt;2&lt;/sup&gt;
+
+European Society of Criminology, 2020-09-11
+
+&lt;sup&gt;1&lt;/sup&gt;University of Edinburgh
+&lt;sup&gt;2&lt;/sup&gt;Griffith University
+
+
+![](https://www.understanding-inequalities.ac.uk/sites/all/themes/theme935/logo.png)&lt;!-- --&gt;
+
+
+---
+
+- Draw on quantitative approaches to modelling intersectionality
+- Standard approach such as interaction terms (see MacQueen, 2016) limited by ‘curse of dimensionality’ (Bell et al. 2019)
+- Random effects specification proposed as an alternative (Jones et al. 2016)
+
+
+---
+# Measures
+- Outcome:
+  - Adult conviction trajectory
+- Independent variables:
+  - Sex (binary coded?)
+  - Indigenous status (problematic in admin data, Walter and Anderson [2013])
+  - Youth justice charge
+  - Police diversion (as juvenile)
+  - Substantiated abuse/neglect
+  - Looked after away from home
+  - Suicidal flag
+  - Youth justice detention
+
+
+---
+# Methods 
+- Make convictions trajectory groups with Latent Class Growth Curves
+- Fit multinomial logistic regression model to estimate association between our independent variables and convictions class with ‘intersectional’ random effect
+- Interpret model results through Average Predictive Comparison (Gelman and Pardoe 2007)
+
+
+---
+#Methods
+- Model estimates from multinomial logistic models are “extraordinarily hard” to interpret (McElreath, 2019)
+- Even more so with our ‘intersectional’ random effect!
+- Interpret through Average Predictive Comparisons (Gelman and Pardoe, 2007)
+- Gives estimated probability of a being in a particular convictions class, conditional different configurations of our independent variables
+
+
+---
+
+## Tooooo many graphs?
 
 &lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/20200326-mers_comp_baseline.png" width="78%" style="display: block; margin: auto;" /&gt;
     </textarea>
