@@ -15,10 +15,19 @@
 
 
 
-
-
 name: title
-class: center, middle, inverse
+class: center, middle, inverse, my-one-page-font
+
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 4em 1em 4em;
+}
+.my-one-page-font {
+  font-size: 20px;
+}
+&lt;/style&gt;    
+
 
 # Exploring inequalities in the impact of childhood system contact on adult criminal conviction trajectories by sex and Indigenous status: Evidence from an Australian data linkage project
 
@@ -32,60 +41,130 @@ European Society of Criminology, 2020-09-11
 
 ![](https://www.understanding-inequalities.ac.uk/sites/all/themes/theme935/logo.png)&lt;!-- --&gt;
 
+
+
 ---
 # Research background
-1. A key question in DLCC is try to understand how childhood experiences relate to adult convictions patterns
-2. One key insight from childhood effects literature is that childhood experiences can have cumulative effects on adult convictions
-  i. See in particular the cumulative effect of contact with both youth justice and child protection systems in childhood. 'Crossover children' (Baidawi, 2020:280) who are involved with both youth justice _and_ child projection have "earlier police involvement and more serious criminal justice sanctions"
-1. A second key insight is thatt sex and race/ethnicity are key factors relating to people's criminal justice outcomes, and that the ways in which childhood experiences shape adult outcomes may vary by sex and race/ethnicity. Broidy et al. (2015:145) " theory and research in developmental and life course criminology should pay more attention to the ways that race/ethnicity intersect with gender to frame the life course experiences of offenders... developmental and life course models need to highlight not just the operant developmental dynamics across key life stages or the relevant, age-graded risk and protective factors at play, but also the ways in which gender and race/ethnicity condition these processes both independently and jointly"
-
+1. How do __childhood experiences__ affect __adult convictions__ histories?
+2. Key insight one: childhood experiences affect adult convictions __cumulatively__. Our focus is on 'Crossover children' [(Baidawi, 2020:280)](https://www.tandfonline.com/doi/full/10.1080/0312407X.2019.1686765) who are involved with both youth justice __and__ child projection
+3. Key insight two: the ways in which childhood experiences shape adult outcomes may __vary by both sex and race/ethnicity__ [(Broidy et al. 2015:145)](https://link.springer.com/article/10.1007/s40865-015-0008-z)
 
 ---
 
-# Research question
-How do the cumulative effect of youth justice and child welfare on adults convictions trajectories vary by sex and race/ethnicity?
+class: center, inverse
+
+# How do the cumulative effects of youth justice and child welfare contact on adult convictions trajectories vary by sex and race/ethnicity?
 
 
 ---
 # Data
-- Queensland Cross-sector Research Collaboration (QCRC)
-- Linked data sources from different administrative departments in Queensland, Australia:
+- Comes from __Queensland Cross-sector Research Collaboration__ (QCRC)
+- __Linked data sources__ from different administrative departments in Queensland, Australia:
   - Youth justice
   - Adult justice
   - Child protection
   - Birth register 
   - Marriages
-
+- Cohorts registered born in Queensland in 1983 and 1984, followed to age 29
 
 ---
+class: my-one-page-font
+
 # Measures
 
-```
-## # A tibble: 12 x 4
-##    Variable               Level               Count Proportion
-##    &lt;chr&gt;                  &lt;chr&gt;               &lt;dbl&gt;      &lt;dbl&gt;
-##  1 "Adult conviction"     "Convicted"         16802      20.2 
-##  2 ""                     "Not convicted"     66569      79.8 
-##  3 "Indigenous Status"    "(ever) Indigenous"  4821       0.06
-##  4 ""                     "Non-Indigenous"    78541       0.94
-##  5 "Sex"                  "Female"            40416       0.48
-##  6 ""                     "Male"              42946       0.52
-##  7 "Police Diversion"     "1"                  9264       0.11
-##  8 "Abuse/Neglect"        "1"                  3515       0.04
-##  9 "Youth Justice Charge" "1"                  3306       0.04
-## 10 "OOHC Placement"       "1"                   784       0.01
-## 11 "Youth Detention"      "1"                   469       0.01
-## 12 "Total"                ""                  83371       1
-```
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variable &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Level &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Count &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Proportion &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Adult conviction &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Convicted &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16802 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20.20 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Not convicted &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 66569 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 79.80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Indigenous Status &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Indigenous (ever) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4821 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.06 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Non-Indigenous &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 78541 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.94 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Sex &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Female &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 40416 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.48 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Male &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 42946 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Police Diversion &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 9264 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.11 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Abuse/Neglect &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3515 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Youth Justice Charge &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3306 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; OOHC Placement &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 784 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Youth Detention &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 469 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 83371 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
-- Based on current best-practice, if a person is listed as Indigenous in any of the datasets in QCRC we code them as Indigenous here.
-- Using IS as an umbrella term obscures the diversity within IS - there are more than 500 Aboriginal and Torres-Strait Islander nations in Australia as a whole (Walter and Andersen 2013). Unfortunately this is unavoidable in our analysis as we have to work with the categories included in the data.
 
 ---
 # Methods 
-- Make convictions trajectory groups with Latent Class Growth Curves (Nagin and Land 1993)
-- Fit multinomial logistic regression model to estimate association between our independent variables and convictions class, using ‘intersectional’ specification (Bell et al. 2019) that is flexible enough to allow interactions between sex, IS and all our childhood factors when the data warrants them, but is conservative, and so stable, when data is very sparse
-- Interpret model results through Average Predictive Comparison (Gelman and Pardoe 2007) which give estimated probability of a being in a particular convictions class, conditional different configurations of our independent variables
+Three steps:
+
+1. Make __convictions trajectory groups__ with Latent Class Growth Curves [(Nagin and Land 1993)](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1745-9125.1993.tb01133.x)
+2. Fit "intersectional" [(Bell et al. 2019)](https://psycnet.apa.org/fulltext/2019-30571-005.html) __multinomial logistic regression__ model to estimate association between our independent variables and convictions class
+3. Interpret model results through __estimated probability of convictions class membersip__, conditional different configurations of our independent variables (i.e. Average Predictive Comparisons, [Gelman and Pardoe 2007](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1467-9531.2007.00181.x))
 
 
 ---
@@ -96,7 +175,7 @@ class: center, middle, inverse
 ---
 
 # Estimated conviction trajectories
-&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/y18_trajectories.png" width="78%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/y18_trajectories.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -109,26 +188,52 @@ class: center, middle, inverse
 ---
 
 # Discussion
-- Risk factors’ relationships to the probabilities of trajectory membership differs by sex and Indigenous status
-- Non-IS women have the largest decrease in probability of no/low class membership in presence of all childhood contacts
-- IS men have the smallest decrease in probability of no/low class membership in presence of all childhood contacts
-- This is partly because of 'floor effects' - IS men already have a lower probability of being in the no/low convictions trajectory group, so they only have so much probability to 'lose'
-- … but the cumulative effect of these risk factors lead to similar outcomes by sex`*`IS, despite the very different estimated baselines by sex`*`IS
+- Childhood experiences' relationships with the probability of adult convictions trajectories __do seem to differ by sex and Indigenous status__:
+   - Non-IS men and women have the largest decrease in probability of no/low class membership in presence of all childhood contacts
+   - In contrast IS men have the smallest decrease in probability of no/low class membership in presence of all childhood contacts
+- This is partly because of __'floor effects'__
+- … but the __cumulative effect__ of these risk factors leads to __similar outcomes by sex`*`IS__, despite the very __different baselines__ by sex`*`IS
 
 ---
 # Concluding thoughts
-
-- From this model we can derive other quantities of interest: for example, we could estimate the 'extra' effect of being a 'cross-over child' by estimating convictions trajectory probabilities under youth justice and child welfare contact compared to the effects of YJ and CW alone
-- Extrapolating back from our results to the population as a whole - some configurations of our independent variables are very rare
-- What does IS measure here? Low baseline probability of no/low convictions for IS men. This is not deficit of IS men - also reflects advantages of non-IS men and women and history of colonialism (Walter and Andersen 2013) as well as policing practices, poverty etc. 
+- This is a first step: from this model we can derive __other quantities of interest__
+   - Look at __other__ combinations of __childhood factors__
+   - Expand comparisons across __different developmental trajectories__
+- What does IS measure here? Must __avoid deficit interpretation__ [(Walter and Andersen 2013)](https://www.taylorfrancis.com/books/e/9781315426570)
 
 ---
+name: thanks
+class: center, middle, inverse, my-one-page-font
 
-# Thank you! 
+# Thank you!
+
+Thank you to Heidi Perrett at Griffith University for facilitating data access
+
+Ben Matthews&lt;sup&gt;1&lt;/sup&gt;, Susan McVie&lt;sup&gt;1&lt;/sup&gt;, Carleen Thompson&lt;sup&gt;2&lt;/sup&gt; and Anna Stewart&lt;sup&gt;2&lt;/sup&gt;
+
+
+European Society of Criminology, 2020-09-11
+
+
+&lt;sup&gt;1&lt;/sup&gt;University of Edinburgh
+&lt;sup&gt;2&lt;/sup&gt;Griffith University
+
+
+
+![](https://www.understanding-inequalities.ac.uk/sites/all/themes/theme935/logo.png)&lt;!-- --&gt;
+
+`@benmatthewsed` | `@U_Inequalities`
+
+---
+name: bonus
+class: center, middle, inverse
+
+# Bonus slides
+
 
 ---
 # Prevalence of independent variables by sex and IS
-&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/iv_proportions.png" width="78%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://raw.githubusercontent.com/benmatthewsed/esc-2020/master/docs/figures/iv_proportions.png" width="50%" style="display: block; margin: auto;" /&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
